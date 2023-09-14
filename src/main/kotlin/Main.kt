@@ -8,27 +8,16 @@ fun main() {
     println("Computer Menggunakan $random")
     println("Anda Menggunakan $input")
 
-    if (input == "Batu" && random == "Gunting") {
-         println("Anda Menang")
-    } else if (input == "Batu" && random == "Batu") {
-        println("Sama")
-    } else if (input == "Batu" && random == "Kertas") {
-        println("Anda Kalah")
-    }  else  if (input == "Gunting" && random == "Kertas") {
+    if(input === random){
+        println("Seri")
+    }   else if (input === "Gunting" && random === "Kertas" ||
+        input === "Batu" && random === "Gunting" ||
+        input === "Kertas" && random === "Batu") {
         println("Anda Menang")
-    } else if (input == "Gunting" && random == "Gunting") {
-        println("Sama")
-    } else if (input == "Gunting" && random == "Batu") {
-        println("Anda Kalah")
-    }   else if (input == "Kertas" && random == "Batu") {
-        println("Anda Menang")
-    } else if (input == "Kertas" && random == "Kertas") {
-        println("Sama")
-    } else if (input == "Kertas" && random == "Gunting") {
-        println("Anda Kalah")
     } else {
-        println("Tolong Masukan jawaban yang benar!!")
+        println("Anda Kalah")
     }
+
     print("Coba Ulang? (Ya/Tidak) = ")
     val masukan = readln()
 
